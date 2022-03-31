@@ -1,11 +1,11 @@
 public class InicioSesion {
 
-    private static RegistroUsuario registroUsuario= new RegistroUsuario();
+    private static RegistroCliente registroCliente= new RegistroCliente();
 
-    public static boolean auntetificar(String nombre, String contraseña){
-        if (obtener(nombre)!=null) {
-            Usuario usuarioconsulta=obtener(nombre);
-            if (usuarioconsulta.getNombre().equals(nombre)&&usuarioconsulta.getContraseña().equals(contraseña)){
+    public static boolean auntetificar(String correo, String contraseña){
+        if (obtener(correo)!=null) {
+            Cliente usuarioconsulta=obtener(correo);
+            if (usuarioconsulta.getNombre().equals(correo)&&usuarioconsulta.getContraseña().equals(contraseña)){
                 return true;
             }
             else{
@@ -20,19 +20,19 @@ public class InicioSesion {
 
 
 
-    public static boolean agregar(Usuario usuario){
-        return registroUsuario.ingresar(usuario);
+    public static boolean agregar(Cliente cliente){
+        return registroCliente.ingresar(cliente);
     }
-    public static boolean modificar(Usuario usuario){
-        return registroUsuario.modificar(usuario);
+    public static boolean modificar(Cliente cliente){
+        return registroCliente.modificar(cliente);
 
     }
     public static boolean eliminar(String usuario){
-        return registroUsuario.eliminar(usuario);
+        return registroCliente.eliminar(usuario);
 
     }
-    public static Usuario obtener(String usuario){
-        return registroUsuario.obtener(usuario);
+    public static Cliente obtener(String cliente){
+        return registroCliente.obtener(cliente);
 
     }
 

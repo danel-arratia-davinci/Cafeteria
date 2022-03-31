@@ -1,23 +1,23 @@
-public class Usuario {
+public class Cliente {
 
-    String Nombre;
+    String Usuario;
     String Correo;
     int tel;
     String Contraseña;
 
-    public Usuario(String nombre, String correo, int tel, String contraseña) {
-        Nombre = nombre;
+    public Cliente (String nombre, String correo, int tel, String contraseña) {
+        Usuario = nombre;
         Correo = correo;
         this.tel = tel;
         Contraseña = contraseña;
     }
 
     public String getNombre() {
-        return Nombre;
+        return Usuario;
     }
 
     public void setNombre(String nombre) {
-        Nombre = nombre;
+        Usuario = nombre;
     }
 
     public String getCorreo() {
